@@ -2,19 +2,24 @@ import re
 
 # Class for Validating IP
 
-class IpCheck:
+class ip_check:
     
    """
    Check the validity and class of an IP address.
 
-   :Validate_It: Verify the IP address.
-   :findClass: Find the class of the IP address.
+   :validate_it: Verify the IP address.
+   :find_class: Find the class of the IP address.
    """
      
    def __init__(self, IP):
          self.IP = IP
     
-   def Validate_It(self):
+   """
+   Check the validity of an IP address..
+   :param request: IP  in string format.
+   :return: The type of IP address. returns 'Invalid IP' for invalid IP address. 
+   """
+   def validate_it(self):
       # Regex expression for validating IPv4
       regex = "^((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])$"
       
@@ -35,9 +40,14 @@ class IpCheck:
          return "Valid IPv6"
       
       return "Invalid IP"
-    
-    # Function to find out the class of an IP address
-   def findClass(self):
+   
+   """
+   Function to find out the class of an IP address
+
+   :param request: IP  in string format.
+   :return: The class of the IP address.
+   """
+   def find_class(self):
        ip = self.IP.split(".")
        ip = [int(i) for i in ip]
        
@@ -62,7 +72,7 @@ class IpCheck:
           return "E"
     
 
-# ip = ipCheck("257.120.223.13")
+# ip = ip_check("257.120.223.13")
 
-#print(ip.Validate_It())
-#print(ip.findClass())
+#print(ip.validate_it())
+#print(ip.find_class())
