@@ -5,7 +5,7 @@ import pytest
 # Function to initialize setup
 @pytest.fixture
 def ip_test_config(request) -> tuple:
-    print("\nRunning setup method...")
+    print("Automatic test running...\nRunning setup method...")
     ip = ip_check("257.120.223.13")
     ip1 = ip_check("127.0.0.0")
     yield ip, ip1
