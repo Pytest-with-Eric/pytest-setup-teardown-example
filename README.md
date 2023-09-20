@@ -1,9 +1,9 @@
 This repo contains the sample code for the article **A comprehensive guide on Pytest Setup Teardown**
 
 ## Code
-The source code is a simple Python script that finds the code of a weekday and can be found at `src/ipChecker.py`. 
+The source code is a simple Python script that finds the code of a weekday and can be found at `src/ip_checker.py`. 
 
-Unit Tests can be found at `tests/unit/test_ipChecker.py`
+Unit Tests can be found at `tests/unit/test_ip_checker.py`
 
 ## Requirements
 * Python (3.8+)
