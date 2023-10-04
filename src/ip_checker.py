@@ -21,7 +21,7 @@ class ip_check:
       :return: The type of IP address. returns 'Invalid IP' for invalid IP address. 
       """
       # Regex expression for validating IPv4
-      regex = "^((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])$"
+      regex = "^((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\\.){3}(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])$"
       
       # Regex expression for validating IPv6
       regex1 = "((([0-9a-fA-F]){1,4})\\:){7}"\
@@ -72,6 +72,12 @@ class ip_check:
       else:
           return "E"
     
+   def delete_objects(self):
+       """
+       function to delete itself
+       """
+       del self
+       
 
 # ip = ip_check("257.120.223.13")
 
