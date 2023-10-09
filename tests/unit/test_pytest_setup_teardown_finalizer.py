@@ -25,8 +25,6 @@ def test_square_positive_number(setup_data):
     print("Running test case for positive number")
 
 def test_square_negative_number(setup_data):
-    print("Intentional error during setup")
-    raise ValueError("Intentional error during setup")
     result = calculate_square(-setup_data)
     assert result == 25  # The square of -5 is also 25
     print("Running test case for negative number")
